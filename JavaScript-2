@@ -1,0 +1,17 @@
+class LearningModel {
+    constructor() {
+        this.caseData = [];
+    }
+
+    addCase(caseItem) {
+        this.caseData.push(caseItem);
+    }
+
+    findPatterns(dtc, symptom) {
+        return this.caseData.filter(c =>
+            c.dtc === dtc && c.symptom === symptom
+        );
+    }
+}
+
+module.exports = LearningModel;
