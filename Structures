@@ -1,0 +1,55 @@
+top-dawg-diagnostics/
+│
+├── README.md
+├── LICENSE
+├── .gitignore
+│
+├── docs/
+│   ├── architecture.md
+│   ├── api-design.md
+│   └── roadmap.md
+│
+├── backend/
+│   ├── src/
+│   │   ├── models/
+│   │   │   ├── Vehicle.js
+│   │   │   ├── Symptom.js
+│   │   │   ├── DTC.js
+│   │   │   ├── Case.js
+│   │   │   └── Fix.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── vehicles.js
+│   │   │   ├── diagnostics.js
+│   │   │   └── cases.js
+│   │   │
+│   │   ├── services/
+│   │   │   ├── diagnosticEngine.js
+│   │   │   └── probabilityEngine.js
+│   │   │
+│   │   └── app.js
+│   │
+│   └── package.json
+│
+├── frontend/
+│   ├── app/
+│   │   ├── screens/
+│   │   │   ├── Dashboard.js
+│   │   │   ├── ScanResults.js
+│   │   │   └── CaseInput.js
+│   │   │
+│   │   ├── components/
+│   │   │   ├── DataCard.js
+│   │   │   └── FixSuggestions.js
+│   │   │
+│   │   └── App.js
+│   │
+│   └── package.json
+│
+├── database/
+│   ├── schema.sql
+│   └── seed-data.json
+│
+└── ai-engine/
+    ├── patternRecognition.js
+    └── learningModel.js
