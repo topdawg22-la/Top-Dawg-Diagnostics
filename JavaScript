@@ -1,0 +1,20 @@
+const getSuggestions = (dtc, symptom, cases) => {
+    let matches = cases.filter(c =>
+        c.dtc === dtc && c.symptom === symptom
+    );
+
+    let fixCounts = {};
+
+    matches.forEach(c => {
+        fixCounts[c.fix] = (fixCounts[c.fix] || 0) + 1;
+    });
+
+    return Object.entries(fixCounts)
+        .map(([fix, count]) => ({
+            fix,
+            probability: count / matches.length
+        }))
+        .sort((a, b) => b.probability - a.probability);
+};
+
+module.exports = { getSuggestions };
