@@ -1,0 +1,40 @@
+---
+
+# 🧱 Database Schema (database/schema.sql)
+
+```sql
+CREATE TABLE vehicles (
+    id SERIAL PRIMARY KEY,
+    vin VARCHAR(17),
+    year INT,
+    make TEXT,
+    model TEXT,
+    engine TEXT,
+    transmission TEXT
+);
+
+CREATE TABLE symptoms (
+    id SERIAL PRIMARY KEY,
+    name TEXT
+);
+
+CREATE TABLE dtc_codes (
+    id SERIAL PRIMARY KEY,
+    code TEXT,
+    description TEXT
+);
+
+CREATE TABLE fixes (
+    id SERIAL PRIMARY KEY,
+    description TEXT
+);
+
+CREATE TABLE cases (
+    id SERIAL PRIMARY KEY,
+    vehicle_id INT,
+    dtc_id INT,
+    symptom_id INT,
+    fix_id INT,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
