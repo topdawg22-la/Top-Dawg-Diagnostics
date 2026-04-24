@@ -1,0 +1,12 @@
+Top-Dawg-Pro-Suite/
+├── app/                    # Hybrid Frontend (React/React Native)
+│   ├── components/         # VIN Reader, 3D Viewer, Diagnostic Gauges
+│   └── hooks/              # AI Logic & Physics Engine Interface
+├── server/                 # Full-Stack Backend (Node.js/FastAPI)
+│   ├── secure_vault/       # AES-128 Encryption & Privacy logic
+│   └── routes/             # API for VIN Lookup & Data Logging
+├── drivers/                # Hardware Interface (PWM/Serial/iSH)
+│   └── pwm_controller.py   # Direct engine/steering control (Non-CAN)
+├── scripts/
+│   └── launcher.sh         # The Hybrid Startup Script
+└── docker-compose.yml      # Containerization for Environment Consistency
